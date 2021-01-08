@@ -1,5 +1,5 @@
 //add cell
-$("#add").click(function () {
+$("#add").click(function() {
   const container = document.createElement("div");
   container.innerText = "O";
   $(".container").append(container);
