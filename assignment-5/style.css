@@ -1,0 +1,20 @@
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.cell{
+    text-align: center;
+    padding: 10px;
+    border: solid 2px black;
+}
+
+.btn{
+    margin: 10px;
+}
+
+#button-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
