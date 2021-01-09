@@ -2,15 +2,8 @@
 
 //add column
 $("#addColumn").click(() => {
-  // const container = document.createElement("div");
-  // $(".container").append(container);
-  // container.setAttribute("class", "cell no-select");
-  // const cell = document.querySelector(".container").lastElementChild
-
   const firstChild = document.querySelector(".container").firstElementChild.childElementCount
   const container = document.querySelector(".container")
-
-
   const col = document.createElement("div");
   col.setAttribute("class", "col");
   for (let i = 0; i < firstChild; i++) {
@@ -24,6 +17,17 @@ $("#addColumn").click(() => {
   container.append(col);
 });
 
+//add row
+$("#addRow").click(() => {
+  const col = document.querySelectorAll(".col")
+  col.forEach(col => {
+    const cell = document.createElement("div");
+    cell.setAttribute("class", "cell no-select");
+    cell.addEventListener("click", onClickCell(cell))
+    col.append(cell);
+  })
+})
+
 //delete column
 $("#deleteColumn").click(() => {
   const container = document.querySelector(".container")
@@ -33,6 +37,10 @@ $("#deleteColumn").click(() => {
   container.style.gridTemplateColumns = "repeat("+ (columnCount)+", 1fr)"
 });
 
+//delete row
+$("#deleteRow").click(() => {
+  $(".container .cell:last-child").remove();
+})
 //fill all
 $("#fillAll").click(() => {
   const cell = document.querySelectorAll(".cell");
