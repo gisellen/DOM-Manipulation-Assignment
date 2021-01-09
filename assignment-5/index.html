@@ -16,15 +16,26 @@
     <div id="button-nav">
         <button id="add" class="btn btn-secondary btn-lg">add</button>
         <button id="delete" class="btn btn-secondary btn-lg">delete</button>
+        <button id="fillAll" class="btn btn-secondary btn-lg">fill all</button>
+        <button id="clearAll" class="btn btn-secondary btn-lg">clear all</button>
+        <div class="btn-group">
+            <form>
+                <select class="custom-select my-1 mr-sm-2" id="colorSelect">
+                    <option id="red" value="#FF2020">red</option>
+                    <option id="green" value="#77B61E">green</option>
+                    <option id="blue" value="#1E56B6">blue</option>
+                </select>
+            </form>
+        </div>
     </div>
 
     <div class="container">
-        <div class="cell">O</div>
-        <div class="cell">O</div>
-        <div class="cell">O</div>
-        <div class="cell">O</div>
-        <div class="cell">O</div>
-        <div class="cell">O</div>
+        <div class="cell no-select"></div>
+        <div class="cell no-select"></div>
+        <div class="cell no-select"></div>
+        <div class="cell no-select"></div>
+        <div class="cell no-select"></div>
+        <div class="cell no-select"></div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
