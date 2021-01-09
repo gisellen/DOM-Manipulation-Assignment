@@ -27,7 +27,7 @@ $("#addRow").click(() => {
     col.append(cell);
   })
 })
-
+ 
 //delete column
 $("#deleteColumn").click(() => {
   const container = document.querySelector(".container")
