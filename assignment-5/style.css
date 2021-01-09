@@ -1,13 +1,12 @@
-.container {
+.container{
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .cell {
     text-align: center;
-    padding: 100px;
+    margin: 10px;
+    padding: 50px;
     border: solid 2px black;
 }
 
